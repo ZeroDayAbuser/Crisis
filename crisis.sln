@@ -1,0 +1,159 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-memory", "crisis-memory\crisis-memory.vcxproj", "{3AD2791C-70C0-489B-86C1-D65BD0863732}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-overlay", "crisis-overlay\crisis-overlay.vcxproj", "{72D142B0-3356-4713-9EAC-815FE93986CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-spoofer", "crisis-spoofer\crisis-spoofer.vcxproj", "{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-fortnite", "crisis-fortnite\crisis-fortnite.vcxproj", "{798E64D4-35C6-4719-8611-1B641BC565A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AD2791C-70C0-489B-86C1-D65BD0863732} = {3AD2791C-70C0-489B-86C1-D65BD0863732}
+		{72D142B0-3356-4713-9EAC-815FE93986CD} = {72D142B0-3356-4713-9EAC-815FE93986CD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-injector", "crisis-injector\crisis-injector.vcxproj", "{E2E5EE2B-7418-4228-9141-651D6006628D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "crisis-auth", "crisis-auth", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		crisis-auth\build.bat = crisis-auth\build.bat
+		crisis-auth\client-example.cpp = crisis-auth\client-example.cpp
+		crisis-auth\database.json = crisis-auth\database.json
+		crisis-auth\discord-envelope.js = crisis-auth\discord-envelope.js
+		crisis-auth\discord-member-route.js = crisis-auth\discord-member-route.js
+		crisis-auth\discord-member-service.js = crisis-auth\discord-member-service.js
+		crisis-auth\discord-request-auth.js = crisis-auth\discord-request-auth.js
+		crisis-auth\discord-response-signing.js = crisis-auth\discord-response-signing.js
+		crisis-auth\install-service.sh = crisis-auth\install-service.sh
+		crisis-auth\package-lock.json = crisis-auth\package-lock.json
+		crisis-auth\package.json = crisis-auth\package.json
+		crisis-auth\player-service.js = crisis-auth\player-service.js
+		crisis-auth\SECURITY.md = crisis-auth\SECURITY.md
+		crisis-auth\server.js = crisis-auth\server.js
+		crisis-auth\server_response.bin = crisis-auth\server_response.bin
+		crisis-auth\server_response_enc.bin = crisis-auth\server_response_enc.bin
+		crisis-auth\test-client.js = crisis-auth\test-client.js
+		crisis-auth\test-discord-member-info.js = crisis-auth\test-discord-member-info.js
+		crisis-auth\test-login-flow.js = crisis-auth\test-login-flow.js
+		crisis-auth\test-module-stream.js = crisis-auth\test-module-stream.js
+		crisis-auth\test-player-service.js = crisis-auth\test-player-service.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "client", "client", "{1A0F8347-030D-4EBD-955C-FA67796D177C}"
+	ProjectSection(SolutionItems) = preProject
+		crisis-auth\client\auth_module.hpp = crisis-auth\client\auth_module.hpp
+		crisis-auth\client\discord_member_info.cpp = crisis-auth\client\discord_member_info.cpp
+		crisis-auth\client\discord_member_info.hpp = crisis-auth\client\discord_member_info.hpp
+		crisis-auth\client\main.cpp = crisis-auth\client\main.cpp
+		crisis-auth\client\pe_loader.hpp = crisis-auth\client\pe_loader.hpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "drivers", "drivers", "{4314A2C4-00F3-44F6-8836-2C4D4DA37B09}"
+	ProjectSection(SolutionItems) = preProject
+		crisis-auth\drivers\driver.sys = crisis-auth\drivers\driver.sys
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{87AF8A75-DB9F-4174-8404-34ABB106BB62}"
+	ProjectSection(SolutionItems) = preProject
+		crisis-auth\modules\rust.dll = crisis-auth\modules\rust.dll
+		crisis-auth\modules\test-dll.dll = crisis-auth\modules\test-dll.dll
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-loader", "crisis-loader\crisis-loader.vcxproj", "{11C66852-44CA-4650-86A7-7AC377827B2B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-bypass", "crisis-bypass\crisis-bypass.vcxproj", "{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crisis-rust", "crisis-rust\crisis-rust.vcxproj", "{2B98EA8D-03ED-415A-AFDF-A28B220112E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Debug|x64.ActiveCfg = Debug|x64
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Debug|x64.Build.0 = Debug|x64
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Debug|x86.Build.0 = Debug|Win32
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Release|x64.ActiveCfg = Release|x64
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Release|x64.Build.0 = Release|x64
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Release|x86.ActiveCfg = Release|Win32
+		{3AD2791C-70C0-489B-86C1-D65BD0863732}.Release|x86.Build.0 = Release|Win32
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Debug|x64.ActiveCfg = Debug|x64
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Debug|x64.Build.0 = Debug|x64
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Debug|x86.ActiveCfg = Debug|Win32
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Debug|x86.Build.0 = Debug|Win32
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Release|x64.ActiveCfg = Release|x64
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Release|x64.Build.0 = Release|x64
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Release|x86.ActiveCfg = Release|Win32
+		{72D142B0-3356-4713-9EAC-815FE93986CD}.Release|x86.Build.0 = Release|Win32
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x64.ActiveCfg = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x64.Build.0 = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x64.Deploy.0 = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x86.ActiveCfg = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x86.Build.0 = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Debug|x86.Deploy.0 = Debug|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x64.ActiveCfg = Release|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x64.Build.0 = Release|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x64.Deploy.0 = Release|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x86.ActiveCfg = Release|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x86.Build.0 = Release|x64
+		{22E0934B-71F5-C4B7-A583-3A1DD3D12F9E}.Release|x86.Deploy.0 = Release|x64
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Debug|x64.ActiveCfg = Debug|x64
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Debug|x64.Build.0 = Debug|x64
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Debug|x86.ActiveCfg = Debug|Win32
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Debug|x86.Build.0 = Debug|Win32
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Release|x64.ActiveCfg = Release|x64
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Release|x64.Build.0 = Release|x64
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Release|x86.ActiveCfg = Release|Win32
+		{798E64D4-35C6-4719-8611-1B641BC565A3}.Release|x86.Build.0 = Release|Win32
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Debug|x64.ActiveCfg = Debug|x64
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Debug|x64.Build.0 = Debug|x64
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Debug|x86.ActiveCfg = Debug|Win32
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Debug|x86.Build.0 = Debug|Win32
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Release|x64.ActiveCfg = Release|x64
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Release|x64.Build.0 = Release|x64
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Release|x86.ActiveCfg = Release|Win32
+		{E2E5EE2B-7418-4228-9141-651D6006628D}.Release|x86.Build.0 = Release|Win32
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Debug|x64.ActiveCfg = Debug|x64
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Debug|x64.Build.0 = Debug|x64
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Debug|x86.ActiveCfg = Debug|Win32
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Debug|x86.Build.0 = Debug|Win32
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Release|x64.ActiveCfg = Release|x64
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Release|x64.Build.0 = Release|x64
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Release|x86.ActiveCfg = Release|Win32
+		{11C66852-44CA-4650-86A7-7AC377827B2B}.Release|x86.Build.0 = Release|Win32
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Debug|x64.ActiveCfg = Debug|x64
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Debug|x64.Build.0 = Debug|x64
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Debug|x86.ActiveCfg = Debug|Win32
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Debug|x86.Build.0 = Debug|Win32
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Release|x64.ActiveCfg = Release|x64
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Release|x64.Build.0 = Release|x64
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Release|x86.ActiveCfg = Release|Win32
+		{E7DF46D5-F4B7-4C0B-A8F5-792E96287FE7}.Release|x86.Build.0 = Release|Win32
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Debug|x64.ActiveCfg = Debug|x64
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Debug|x64.Build.0 = Debug|x64
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Debug|x86.ActiveCfg = Debug|Win32
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Debug|x86.Build.0 = Debug|Win32
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Release|x64.ActiveCfg = Release|x64
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Release|x64.Build.0 = Release|x64
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Release|x86.ActiveCfg = Release|Win32
+		{2B98EA8D-03ED-415A-AFDF-A28B220112E4}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A0F8347-030D-4EBD-955C-FA67796D177C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4314A2C4-00F3-44F6-8836-2C4D4DA37B09} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{87AF8A75-DB9F-4174-8404-34ABB106BB62} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B78E4F5-A45F-45D1-8173-E5D8E51D9A66}
+	EndGlobalSection
+EndGlobal

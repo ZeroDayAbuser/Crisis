@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{a1b2c3d4-0001-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\shared">
+      <UniqueIdentifier>{a1b2c3d4-0001-0002-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\overlay">
+      <UniqueIdentifier>{a1b2c3d4-0001-0003-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\paging">
+      <UniqueIdentifier>{a1b2c3d4-0001-0004-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\memory">
+      <UniqueIdentifier>{a1b2c3d4-0001-0005-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\target">
+      <UniqueIdentifier>{a1b2c3d4-0001-0006-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\mouse">
+      <UniqueIdentifier>{a1b2c3d4-0001-0007-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\deps">
+      <UniqueIdentifier>{a1b2c3d4-0002-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\deps\ia32">
+      <UniqueIdentifier>{a1b2c3d4-0002-0002-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ext">
+      <UniqueIdentifier>{a1b2c3d4-0003-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\api">
+      <UniqueIdentifier>{a1b2c3d4-0004-0001-0001-000000000001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="entrypoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deps\includes.h">
+      <Filter>Header Files\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ia32\ia32.h">
+      <Filter>Header Files\deps\ia32</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\init.h">
+      <Filter>Header Files\deps</Filter>
+    </ClInclude>
+    <ClInclude Include="routines.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\obfuscation\obfuscation.h">
+      <Filter>Header Files\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="core\logging.hxx">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility.hxx">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\memory.hxx">
+      <Filter>Header Files\core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\process\process.hxx">
+      <Filter>Header Files\core\target</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\paging\paging.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\mapping\mapping.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\mapping\memory\command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\mapping\memory\memory.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\mapping\overlay\commands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\mapping\overlay\overlay.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\protection\protection.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

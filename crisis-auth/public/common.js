@@ -1,0 +1,4 @@
+export function csrf() { const row=document.cookie.split('; ').find((part)=>part.startsWith('crisis_csrf=')); return row?decodeURIComponent(row.split('=').slice(1).join('=')):''; }
+export async function api(url, options={}) { const headers={Accept:'application/json',...(options.body instanceof FormData?{}:{'Content-Type':'application/json'}),...(options.headers||{})}; if (!['GET','HEAD'].includes(options.method||'GET')) headers['X-CSRF-Token']=csrf(); const response=await fetch(url,{credentials:'same-origin',...options,headers}); let body={}; try { body=await response.json(); } catch {} if(!response.ok) throw new Error(body.error||'Request failed'); return body; }
+export function message(element,text,ok=false){ element.textContent=text; element.className=`alert ${ok?'ok':'error'}`; }
+export function seconds(value){ if(!value)return 'No active time'; const days=Math.floor(value/86400), hours=Math.floor((value%86400)/3600); return `${days}d ${hours}h`; }

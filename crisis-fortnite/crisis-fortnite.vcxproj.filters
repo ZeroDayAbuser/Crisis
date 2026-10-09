@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\cache.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\game.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\items.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\local.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\players.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\world.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\engine\emulators\fname.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\engine\emulators\string.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\interface.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\aimbot\aimbot.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\aimbot\curve\curve.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\aimbot\memory.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\aimbot\prediction.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\aimbot\triggerbot.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\boxes.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\health.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\inventory.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\skeleton.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\text.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\tracers.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\player.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\world_visuals.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\menu\discord.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\menu\menu.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\stats\api.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\stats\stats.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\stats\thread\thread.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\system\system.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\visuals\esp\threat_arrow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\widgets\widgets.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\widgets\radar.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\interface\widgets\top_bar.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cache\offsets.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ext\bypass\bypass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\utility.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\priority.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\obfuscation\obfuscation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\classes\classes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\cache\cache.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\interface.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\menu\menu.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\menu\discord.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\cache\actors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\player.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\offsets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\cache\game.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\world.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\overlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\aimbot.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\emulators\string.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\text.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\boxes.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\skeleton.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\movement.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\weapon.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\curve\algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stats\api.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stats\stats.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stats\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\inventory.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stats\thread\cache.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\stats\thread\thread.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\curve\curve.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\emulators\fname.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\health.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\prediction.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\triggerbot.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\memory.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\system\system.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\system\api.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\system\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\tracers.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\casino\client.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\profile\client.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\visuals\esp\threat_arrow.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\widgets\widgets.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\interface\aimbot\silent_aim.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\engine\classes\kismet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

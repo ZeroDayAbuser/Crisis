@@ -1,0 +1,22 @@
+{
+  "schema_version": 5,
+  "keys": {},
+  "players": {},
+  "users": {},
+  "sessions": {},
+  "device_authorizations": {},
+  "device_credentials": {},
+  "account_license_links": {},
+  "file_slots": {},
+  "coin_ledger": [],
+  "subscription_ledger": [],
+  "audit_events": [],
+  "discord_pairing_codes": {},
+  "hwid_reset_requests": {},
+  "resellers": {},
+  "reseller_ledger": [],
+  "service_state": {
+    "keys_paused": false,
+    "keys_paused_at": null
+  }
+}

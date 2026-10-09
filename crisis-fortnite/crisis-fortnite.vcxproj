@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{798e64d4-35c6-4719-8611-1b641bc565a3}</ProjectGuid>
+    <RootNamespace>eternalfortnite</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\builds\</OutDir>
+    <IntDir>..\builds\intermediate\$(ProjectName)\</IntDir>
+    <IncludePath>.\;..\;$(IncludePath)</IncludePath>
+    <ExternalIncludePath>C:\Program Files\Microsoft Visual Studio\2022\Enterprise\DIA SDK\include;C:\Program Files\Microsoft Visual Studio\2022\Professional\DIA SDK\include;C:\Program Files\Microsoft Visual Studio\2022\Community\DIA SDK\include;$(ExternalIncludePath)</ExternalIncludePath>
+    <LibraryPath>..\builds\;C:\Program Files\Microsoft Visual Studio\2022\Professional\DIA SDK\lib\amd64;C:\Program Files\Microsoft Visual Studio\2022\Enterprise\DIA SDK\lib\amd64;C:\Program Files\Microsoft Visual Studio\2022\Community\DIA SDK\lib\amd64;$(LibraryPath)</LibraryPath>
+    <TargetName>crisis-fortnite</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ZYDIS_STATIC_BUILD;ZYCORE_STATIC_BUILD;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)packages\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Advapi32.lib;unicorn.lib;Zycore.lib;Zydis.lib;libpng16.lib;zs.lib;bz2.lib;brotlidec.lib;brotlicommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Microsoft Visual Studio\2022\Enterprise\DIA SDK\lib\amd64;$(SolutionDir)packages\lib;C:\Program Files\Microsoft Visual Studio\2022\Community\DIA SDK\lib\amd64;C:\Program Files\Microsoft Visual Studio\2022\Professional\DIA SDK\lib\amd64;%(AdditionalDependencies)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="core\engine\classes\kismet.h" />
+    <ClInclude Include="core\interface\aimbot\curve\curve.hxx" />
+    <ClCompile Include="core\cache\offsets.cxx" />
+    <ClCompile Include="main.cxx" />
+    <ClCompile Include="core\cache\cache.cxx" />
+    <ClCompile Include="core\cache\game.cxx" />
+    <ClCompile Include="core\cache\items.cxx" />
+    <ClCompile Include="core\cache\local.cxx" />
+    <ClCompile Include="core\cache\players.cxx" />
+    <ClCompile Include="core\cache\world.cxx" />
+    <ClCompile Include="core\engine\emulators\fname.cxx" />
+    <ClCompile Include="core\engine\emulators\string.cxx" />
+    <ClCompile Include="core\interface\interface.cxx" />
+    <ClCompile Include="core\interface\aimbot\aimbot.cxx" />
+    <ClCompile Include="core\interface\aimbot\curve\curve.cxx" />
+    <ClCompile Include="core\interface\aimbot\memory.cxx" />
+    <ClCompile Include="core\interface\aimbot\prediction.cxx" />
+    <ClCompile Include="core\interface\aimbot\triggerbot.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\boxes.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\health.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\inventory.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\text.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\skeleton.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\tracers.cxx" />
+    <ClCompile Include="core\interface\visuals\esp\threat_arrow.cxx" />
+    <ClCompile Include="core\interface\visuals\player.cxx" />
+    <ClCompile Include="core\interface\visuals\world_visuals.cxx" />
+    <ClCompile Include="core\interface\menu\discord.cxx" />
+    <ClCompile Include="core\interface\menu\menu.cxx" />
+    <ClCompile Include="core\interface\widgets\widgets.cxx" />
+    <ClCompile Include="core\interface\widgets\radar.cxx" />
+    <ClCompile Include="core\interface\widgets\top_bar.cxx" />
+    <ClCompile Include="core\stats\api.cxx" />
+    <ClCompile Include="core\stats\stats.cxx" />
+    <ClCompile Include="core\stats\thread\thread.cxx" />
+    <ClCompile Include="core\system\system.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\cache\actors.h" />
+    <ClInclude Include="core\casino\client.hxx" />
+    <ClInclude Include="core\interface\aimbot\silent_aim.hxx" />
+    <ClInclude Include="core\profile\client.hxx" />
+    <ClInclude Include="core\interface\aimbot\memory.hxx" />
+    <ClInclude Include="core\interface\aimbot\prediction.hxx" />
+    <ClInclude Include="core\interface\aimbot\triggerbot.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\health.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\tracers.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\threat_arrow.hxx" />
+    <ClInclude Include="core\interface\widgets\widgets.hxx" />
+    <ClInclude Include="core\stats\thread\cache.hxx" />
+    <ClInclude Include="core\stats\thread\thread.hxx" />
+    <ClInclude Include="core\engine\classes\classes.h" />
+    <ClInclude Include="core\engine\enums.h" />
+    <ClInclude Include="core\engine\structs.h" />
+    <ClInclude Include="core\cache\cache.hxx" />
+    <ClInclude Include="core\cache\game.hxx" />
+    <ClInclude Include="core\engine\emulators\fname.hxx" />
+    <ClInclude Include="core\engine\emulators\string.hxx" />
+    <ClInclude Include="core\engine\offsets.h" />
+    <ClInclude Include="core\interface\aimbot\aimbot.hxx" />
+    <ClInclude Include="core\interface\aimbot\curve\algorithm.h" />
+    <ClInclude Include="core\interface\interface.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\inventory.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\movement.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\skeleton.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\weapon.hxx" />
+    <ClInclude Include="core\interface\menu\menu.hxx" />
+    <ClInclude Include="core\interface\menu\discord.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\boxes.hxx" />
+    <ClInclude Include="core\interface\visuals\esp\text.hxx" />
+    <ClInclude Include="core\interface\overlay.h" />
+    <ClInclude Include="core\interface\config.h" />
+    <ClInclude Include="core\interface\visuals\world.hxx" />
+    <ClInclude Include="core\interface\visuals\player.hxx" />
+    <ClInclude Include="core\stats\api.hxx" />
+    <ClInclude Include="core\stats\stats.hxx" />
+    <ClInclude Include="core\stats\types.h" />
+    <ClInclude Include="core\system\api.hxx" />
+    <ClInclude Include="core\system\system.hxx" />
+    <ClInclude Include="core\system\types.h" />
+    <ClInclude Include="core\utility\utility.hxx" />
+    <ClInclude Include="core\utility\priority.h" />
+    <ClInclude Include="deps\includes.h" />
+    <ClInclude Include="ext\bypass\bypass.h" />
+    <ClInclude Include="ext\obfuscation\obfuscation.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

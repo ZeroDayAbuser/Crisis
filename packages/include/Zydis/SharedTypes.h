@@ -1,0 +1,747 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifndef ZYDIS_SHAREDTYPES_H
+#define ZYDIS_SHAREDTYPES_H
+
+#include <Zycore/Types.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+
+
+
+
+
+
+#define ZYDIS_MAX_INSTRUCTION_LENGTH    15
+#define ZYDIS_MAX_OPERAND_COUNT         10 
+#define ZYDIS_MAX_OPERAND_COUNT_VISIBLE  5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef enum ZydisMachineMode_
+{
+    
+
+
+    ZYDIS_MACHINE_MODE_LONG_64,
+    
+
+
+    ZYDIS_MACHINE_MODE_LONG_COMPAT_32,
+    
+
+
+    ZYDIS_MACHINE_MODE_LONG_COMPAT_16,
+    
+
+
+    ZYDIS_MACHINE_MODE_LEGACY_32,
+    
+
+
+    ZYDIS_MACHINE_MODE_LEGACY_16,
+    
+
+
+    ZYDIS_MACHINE_MODE_REAL_16,
+
+    
+
+
+    ZYDIS_MACHINE_MODE_MAX_VALUE = ZYDIS_MACHINE_MODE_REAL_16,
+    
+
+
+    ZYDIS_MACHINE_MODE_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_MACHINE_MODE_MAX_VALUE)
+} ZydisMachineMode;
+
+
+
+
+
+
+
+
+typedef enum ZydisStackWidth_
+{
+    ZYDIS_STACK_WIDTH_16,
+    ZYDIS_STACK_WIDTH_32,
+    ZYDIS_STACK_WIDTH_64,
+
+    
+
+
+    ZYDIS_STACK_WIDTH_MAX_VALUE = ZYDIS_STACK_WIDTH_64,
+    
+
+
+    ZYDIS_STACK_WIDTH_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_STACK_WIDTH_MAX_VALUE)
+} ZydisStackWidth;
+
+
+
+
+
+
+
+
+typedef enum ZydisElementType_
+{
+    ZYDIS_ELEMENT_TYPE_INVALID,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_STRUCT,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_UINT,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_INT,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_FLOAT16,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_FLOAT32,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_FLOAT64,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_FLOAT80,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_BFLOAT16,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_LONGBCD,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_CC,
+
+    
+
+
+    ZYDIS_ELEMENT_TYPE_MAX_VALUE = ZYDIS_ELEMENT_TYPE_CC,
+    
+
+
+    ZYDIS_ELEMENT_TYPE_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_ELEMENT_TYPE_MAX_VALUE)
+} ZydisElementType;
+
+
+
+
+
+
+
+
+typedef ZyanU16 ZydisElementSize;
+
+
+
+
+
+
+
+
+typedef enum ZydisOperandType_
+{
+    
+
+
+    ZYDIS_OPERAND_TYPE_UNUSED,
+    
+
+
+    ZYDIS_OPERAND_TYPE_REGISTER,
+    
+
+
+    ZYDIS_OPERAND_TYPE_MEMORY,
+    
+
+
+    ZYDIS_OPERAND_TYPE_POINTER,
+    
+
+
+    ZYDIS_OPERAND_TYPE_IMMEDIATE,
+
+    
+
+
+    ZYDIS_OPERAND_TYPE_MAX_VALUE = ZYDIS_OPERAND_TYPE_IMMEDIATE,
+    
+
+
+    ZYDIS_OPERAND_TYPE_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_OPERAND_TYPE_MAX_VALUE)
+} ZydisOperandType;
+
+
+ZYAN_STATIC_ASSERT(ZYAN_BITS_TO_REPRESENT(
+    ZYDIS_OPERAND_TYPE_MAX_VALUE - ZYDIS_OPERAND_TYPE_REGISTER) == 2);
+
+
+
+
+
+
+
+
+typedef enum ZydisOperandEncoding_
+{
+    ZYDIS_OPERAND_ENCODING_NONE,
+    ZYDIS_OPERAND_ENCODING_MODRM_REG,
+    ZYDIS_OPERAND_ENCODING_MODRM_RM,
+    ZYDIS_OPERAND_ENCODING_OPCODE,
+    ZYDIS_OPERAND_ENCODING_NDSNDD,
+    ZYDIS_OPERAND_ENCODING_IS4,
+    ZYDIS_OPERAND_ENCODING_MASK,
+    ZYDIS_OPERAND_ENCODING_DISP8,
+    ZYDIS_OPERAND_ENCODING_DISP16,
+    ZYDIS_OPERAND_ENCODING_DISP32,
+    ZYDIS_OPERAND_ENCODING_DISP64,
+    ZYDIS_OPERAND_ENCODING_DISP16_32_64,
+    ZYDIS_OPERAND_ENCODING_DISP32_32_64,
+    ZYDIS_OPERAND_ENCODING_DISP16_32_32,
+    ZYDIS_OPERAND_ENCODING_UIMM8,
+    ZYDIS_OPERAND_ENCODING_UIMM16,
+    ZYDIS_OPERAND_ENCODING_UIMM32,
+    ZYDIS_OPERAND_ENCODING_UIMM64,
+    ZYDIS_OPERAND_ENCODING_UIMM16_32_64,
+    ZYDIS_OPERAND_ENCODING_UIMM32_32_64,
+    ZYDIS_OPERAND_ENCODING_UIMM16_32_32,
+    ZYDIS_OPERAND_ENCODING_SIMM8,
+    ZYDIS_OPERAND_ENCODING_SIMM16,
+    ZYDIS_OPERAND_ENCODING_SIMM32,
+    ZYDIS_OPERAND_ENCODING_SIMM64,
+    ZYDIS_OPERAND_ENCODING_SIMM16_32_64,
+    ZYDIS_OPERAND_ENCODING_SIMM32_32_64,
+    ZYDIS_OPERAND_ENCODING_SIMM16_32_32,
+    ZYDIS_OPERAND_ENCODING_JIMM8,
+    ZYDIS_OPERAND_ENCODING_JIMM16,
+    ZYDIS_OPERAND_ENCODING_JIMM32,
+    ZYDIS_OPERAND_ENCODING_JIMM64,
+    ZYDIS_OPERAND_ENCODING_JIMM16_32_64,
+    ZYDIS_OPERAND_ENCODING_JIMM32_32_64,
+    ZYDIS_OPERAND_ENCODING_JIMM16_32_32,
+
+    
+
+
+    ZYDIS_OPERAND_ENCODING_MAX_VALUE = ZYDIS_OPERAND_ENCODING_JIMM16_32_32,
+    
+
+
+    ZYDIS_OPERAND_ENCODING_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_OPERAND_ENCODING_MAX_VALUE)
+} ZydisOperandEncoding;
+
+
+
+
+
+
+
+
+typedef enum ZydisOperandVisibility_
+{
+    ZYDIS_OPERAND_VISIBILITY_INVALID,
+    
+
+
+    ZYDIS_OPERAND_VISIBILITY_EXPLICIT,
+    
+
+
+    ZYDIS_OPERAND_VISIBILITY_IMPLICIT,
+    
+
+
+    ZYDIS_OPERAND_VISIBILITY_HIDDEN,
+
+    
+
+
+    ZYDIS_OPERAND_VISIBILITY_MAX_VALUE = ZYDIS_OPERAND_VISIBILITY_HIDDEN,
+    
+
+
+    ZYDIS_OPERAND_VISIBILITY_REQUIRED_BITS =
+        ZYAN_BITS_TO_REPRESENT(ZYDIS_OPERAND_VISIBILITY_MAX_VALUE)
+} ZydisOperandVisibility;
+
+
+
+
+
+
+
+
+typedef enum ZydisOperandAction_
+{
+    
+    
+    
+
+    
+
+
+    ZYDIS_OPERAND_ACTION_READ       = 0x01,
+    
+
+
+    ZYDIS_OPERAND_ACTION_WRITE      = 0x02,
+    
+
+
+    ZYDIS_OPERAND_ACTION_CONDREAD   = 0x04,
+    
+
+
+    ZYDIS_OPERAND_ACTION_CONDWRITE  = 0x08,
+
+    
+    
+    
+
+    
+
+
+    ZYDIS_OPERAND_ACTION_READWRITE = ZYDIS_OPERAND_ACTION_READ | ZYDIS_OPERAND_ACTION_WRITE,
+    
+
+
+
+    ZYDIS_OPERAND_ACTION_CONDREAD_CONDWRITE =
+        ZYDIS_OPERAND_ACTION_CONDREAD | ZYDIS_OPERAND_ACTION_CONDWRITE,
+    
+
+
+
+    ZYDIS_OPERAND_ACTION_READ_CONDWRITE =
+        ZYDIS_OPERAND_ACTION_READ | ZYDIS_OPERAND_ACTION_CONDWRITE,
+    
+
+
+
+    ZYDIS_OPERAND_ACTION_CONDREAD_WRITE =
+        ZYDIS_OPERAND_ACTION_CONDREAD | ZYDIS_OPERAND_ACTION_WRITE,
+
+    
+
+
+    ZYDIS_OPERAND_ACTION_MASK_READ  = ZYDIS_OPERAND_ACTION_READ | ZYDIS_OPERAND_ACTION_CONDREAD,
+    
+
+
+    ZYDIS_OPERAND_ACTION_MASK_WRITE = ZYDIS_OPERAND_ACTION_WRITE | ZYDIS_OPERAND_ACTION_CONDWRITE,
+
+    
+
+    
+
+
+    ZYDIS_OPERAND_ACTION_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_OPERAND_ACTION_CONDWRITE)
+} ZydisOperandAction;
+
+
+
+
+typedef ZyanU8 ZydisOperandActions;
+
+
+
+
+
+
+
+
+typedef enum ZydisInstructionEncoding_
+{
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_LEGACY,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_3DNOW,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_XOP,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_VEX,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_EVEX,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_MVEX,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_REX2,
+
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_MAX_VALUE = ZYDIS_INSTRUCTION_ENCODING_REX2,
+    
+
+
+    ZYDIS_INSTRUCTION_ENCODING_REQUIRED_BITS =
+        ZYAN_BITS_TO_REPRESENT(ZYDIS_INSTRUCTION_ENCODING_MAX_VALUE)
+} ZydisInstructionEncoding;
+
+
+
+
+
+
+
+
+typedef enum ZydisOpcodeMap_
+{
+    ZYDIS_OPCODE_MAP_DEFAULT,
+    ZYDIS_OPCODE_MAP_0F,
+    ZYDIS_OPCODE_MAP_0F38,
+    ZYDIS_OPCODE_MAP_0F3A,
+    ZYDIS_OPCODE_MAP_MAP4,
+    ZYDIS_OPCODE_MAP_MAP5,
+    ZYDIS_OPCODE_MAP_MAP6,
+    ZYDIS_OPCODE_MAP_MAP7,
+    ZYDIS_OPCODE_MAP_0F0F,
+    ZYDIS_OPCODE_MAP_XOP8,
+    ZYDIS_OPCODE_MAP_XOP9,
+    ZYDIS_OPCODE_MAP_XOPA,
+
+    
+
+
+    ZYDIS_OPCODE_MAP_MIN_VALUE = ZYDIS_OPCODE_MAP_DEFAULT,
+    
+
+
+    ZYDIS_OPCODE_MAP_MAX_VALUE = ZYDIS_OPCODE_MAP_XOPA,
+    
+
+
+    ZYDIS_OPCODE_MAP_REQUIRED_BITS = ZYAN_BITS_TO_REPRESENT(ZYDIS_OPCODE_MAP_MAX_VALUE)
+} ZydisOpcodeMap;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef ZyanU64 ZydisInstructionAttributes;
+
+
+
+
+#define ZYDIS_ATTRIB_HAS_MODRM                  (1ULL <<  0)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SIB                    (1ULL <<  1)
+
+
+
+#define ZYDIS_ATTRIB_HAS_REX                    (1ULL <<  2)
+
+
+
+#define ZYDIS_ATTRIB_HAS_XOP                    (1ULL <<  3)
+
+
+
+#define ZYDIS_ATTRIB_HAS_VEX                    (1ULL <<  4)
+
+
+
+#define ZYDIS_ATTRIB_HAS_EVEX                   (1ULL <<  5)
+
+
+
+#define ZYDIS_ATTRIB_HAS_MVEX                   (1ULL <<  6)
+
+
+
+#define ZYDIS_ATTRIB_IS_RELATIVE                (1ULL <<  7)
+
+
+
+
+
+#define ZYDIS_ATTRIB_IS_PRIVILEGED              (1ULL <<  8)
+
+
+
+#define ZYDIS_ATTRIB_CPUFLAG_ACCESS             (1ULL <<  9)
+
+
+
+#define ZYDIS_ATTRIB_CPU_STATE_CR               (1ULL << 10)
+
+
+
+#define ZYDIS_ATTRIB_CPU_STATE_CW               (1ULL << 11)
+
+
+
+#define ZYDIS_ATTRIB_FPU_STATE_CR               (1ULL << 12)
+
+
+
+#define ZYDIS_ATTRIB_FPU_STATE_CW               (1ULL << 13)
+
+
+
+#define ZYDIS_ATTRIB_XMM_STATE_CR               (1ULL << 14)
+
+
+
+#define ZYDIS_ATTRIB_XMM_STATE_CW               (1ULL << 15)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_LOCK               (1ULL << 16)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_REP                (1ULL << 17)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_REPE               (1ULL << 18)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_REPZ               ZYDIS_ATTRIB_ACCEPTS_REPE
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_REPNE              (1ULL << 19)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_REPNZ              ZYDIS_ATTRIB_ACCEPTS_REPNE
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_BND                (1ULL << 20)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_XACQUIRE           (1ULL << 21)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_XRELEASE           (1ULL << 22)
+
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_HLE_WITHOUT_LOCK   (1ULL << 23)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_BRANCH_HINTS       (1ULL << 24)
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_NOTRACK            (1ULL << 25)
+
+
+
+
+#define ZYDIS_ATTRIB_ACCEPTS_SEGMENT            (1ULL << 26)
+
+
+
+#define ZYDIS_ATTRIB_HAS_LOCK                   (1ULL << 27)
+
+
+
+#define ZYDIS_ATTRIB_HAS_REP                    (1ULL << 28)
+
+
+
+#define ZYDIS_ATTRIB_HAS_REPE                   (1ULL << 29)
+
+
+
+#define ZYDIS_ATTRIB_HAS_REPZ                   ZYDIS_ATTRIB_HAS_REPE
+
+
+
+#define ZYDIS_ATTRIB_HAS_REPNE                  (1ULL << 30)
+
+
+
+#define ZYDIS_ATTRIB_HAS_REPNZ                  ZYDIS_ATTRIB_HAS_REPNE
+
+
+
+#define ZYDIS_ATTRIB_HAS_BND                    (1ULL << 31)
+
+
+
+#define ZYDIS_ATTRIB_HAS_XACQUIRE               (1ULL << 32)
+
+
+
+#define ZYDIS_ATTRIB_HAS_XRELEASE               (1ULL << 33)
+
+
+
+#define ZYDIS_ATTRIB_HAS_BRANCH_NOT_TAKEN       (1ULL << 34)
+
+
+
+#define ZYDIS_ATTRIB_HAS_BRANCH_TAKEN           (1ULL << 35)
+
+
+
+#define ZYDIS_ATTRIB_HAS_NOTRACK                (1ULL << 36)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_CS             (1ULL << 37)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_SS             (1ULL << 38)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_DS             (1ULL << 39)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_ES             (1ULL << 40)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_FS             (1ULL << 41)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT_GS             (1ULL << 42)
+
+
+
+#define ZYDIS_ATTRIB_HAS_SEGMENT                (ZYDIS_ATTRIB_HAS_SEGMENT_CS | \
+                                                 ZYDIS_ATTRIB_HAS_SEGMENT_SS | \
+                                                 ZYDIS_ATTRIB_HAS_SEGMENT_DS | \
+                                                 ZYDIS_ATTRIB_HAS_SEGMENT_ES | \
+                                                 ZYDIS_ATTRIB_HAS_SEGMENT_FS | \
+                                                 ZYDIS_ATTRIB_HAS_SEGMENT_GS)
+
+
+
+#define ZYDIS_ATTRIB_HAS_OPERANDSIZE            (1ULL << 43) 
+
+
+
+#define ZYDIS_ATTRIB_HAS_ADDRESSSIZE            (1ULL << 44) 
+
+
+
+
+
+#define ZYDIS_ATTRIB_HAS_EVEX_B                 (1ULL << 45) 
+
+
+
+#define ZYDIS_ATTRIB_HAS_REX2                   (1ULL << 46) 
+
+
+
+#define ZYDIS_ATTRIB_HAS_EEVEX                  (1ULL << 47) 
+
+
+
+
+
+
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif 

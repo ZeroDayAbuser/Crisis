@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\auth\games.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\auth\games.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\obfuscation\obfuscation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\utility.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\crash.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\injector\injector.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\injector\stub.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\shared\shared.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\module.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\service\cache\cache.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\service\driver\driver.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\service\bytes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\service\service.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\service\startup.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ia32\ia32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\pdb\pdb.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\kernel\paging.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\kernel\syscall.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\kernel\kernel.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\mapping\mapping.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\memory.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\kernel\process.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\mapper\mapper.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\mapper\spoofer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\bypass\bypass.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\traces\events.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\traces\journal.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\traces\prefetch.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\utility\dbgmon.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\vad.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\backend\backend.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\streamproof\streamproof.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\auth\auth.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\memory\kernel\cow.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\module\shared\transport.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\communication\communication.hxx">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="core\communication\communcation.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

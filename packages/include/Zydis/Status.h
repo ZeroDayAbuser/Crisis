@@ -1,0 +1,173 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifndef ZYDIS_STATUS_H
+#define ZYDIS_STATUS_H
+
+#include <Zycore/Status.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+#define ZYAN_MODULE_ZYDIS   0x002u
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define ZYDIS_STATUS_NO_MORE_DATA \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x00u)
+
+
+
+
+
+#define ZYDIS_STATUS_DECODING_ERROR \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x01u)
+
+
+
+
+#define ZYDIS_STATUS_INSTRUCTION_TOO_LONG \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x02u)
+
+
+
+
+#define ZYDIS_STATUS_BAD_REGISTER \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x03u)
+
+
+
+
+
+#define ZYDIS_STATUS_ILLEGAL_LOCK \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x04u)
+
+
+
+
+
+#define ZYDIS_STATUS_ILLEGAL_LEGACY_PFX \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x05u)
+
+
+
+
+#define ZYDIS_STATUS_ILLEGAL_REX \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x06u)
+
+ 
+
+
+#define ZYDIS_STATUS_ILLEGAL_REX2 \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x07u)
+
+
+
+
+#define ZYDIS_STATUS_INVALID_MAP \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x08u)
+
+
+
+
+#define ZYDIS_STATUS_MALFORMED_EVEX \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x09u)
+
+
+
+
+#define ZYDIS_STATUS_MALFORMED_MVEX \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x0Au)
+
+
+
+
+#define ZYDIS_STATUS_INVALID_MASK \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x0Bu)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#define ZYDIS_STATUS_SKIP_TOKEN \
+    ZYAN_MAKE_STATUS(0u, ZYAN_MODULE_ZYDIS, 0x0Cu)
+
+
+
+
+
+#define ZYDIS_STATUS_IMPOSSIBLE_INSTRUCTION \
+    ZYAN_MAKE_STATUS(1u, ZYAN_MODULE_ZYDIS, 0x0Du)
+
+
+
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif 

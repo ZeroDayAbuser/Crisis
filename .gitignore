@@ -1,0 +1,43 @@
+# Build outputs
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.lib
+*.exe
+*.dll
+*.sys
+*.pdb
+
+# Build directories
+builds/
+Debug/
+Release/
+x64/
+x86/
+
+# IDE
+.vs/
+*.user
+*.suo
+*.userosscache
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Auth
+.env
+.env.local
+
+# Temp
+*.tmp
+*.temp
+*.log
+
+# Large binaries
+packages/lib/
+*.lib
+*.zip
